@@ -1,11 +1,9 @@
 <?php get_header(); ?>
 
-	<?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
-    
-    	<h1><?php the_title(); ?></h1>
-    
-    	<?php the_content(); ?>
-
-	<?php endwhile; endif; ?>
+<section class="front-page-hero">
+	<div class="front-page-hero-overlay"> </div>
+	<div class="home-hero">
+	</div>
+</section>
 
 <?php get_footer(); ?>
