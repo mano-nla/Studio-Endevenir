@@ -55,6 +55,22 @@ body {
   margin: 0;
 }
 
+.primary-button {
+  background: #394e6c;
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  padding: 7px 18px;
+  text-decoration: none;
+  color: #f7f7f7;
+  font-family: "Figtree", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  transition: font-size 0.2s ease-in-out;
+}
+.primary-button:hover {
+  font-size: 16px;
+}
+
 .glass-button {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
@@ -109,10 +125,18 @@ body {
   position: sticky;
   top: 20px;
   z-index: 1000;
-  transition: background 0.3s ease-in-out;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: background 0.6s ease-in-out;
 }
 .header.header--scrolled {
   background: linear-gradient(180deg, rgba(57, 78, 108, 0.6) 0%, rgba(57, 78, 108, 0.4) 75%, rgba(57, 78, 108, 0) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.header img {
+  width: 150px;
+  height: auto;
 }
 
 .header-nav {
@@ -127,11 +151,11 @@ body {
   color: #f7f7f7;
   font-family: "Figtree", sans-serif;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 15px;
   transition: font-size 0.2s ease-in-out;
 }
 .header-nav a:hover {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 /****** Mise en page section hero ******/
@@ -183,32 +207,16 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-.front-page-hero-bottom-projet {
-  background: #394e6c;
-  border-radius: 20px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-  padding: 7px 18px;
-  margin-right: 20px;
-  text-decoration: none;
-  color: #f7f7f7;
-  font-family: "Figtree", sans-serif;
-  font-weight: 600;
-  font-size: 18px;
-  transition: font-size 0.2s ease-in-out;
-}
-.front-page-hero-bottom-projet:hover {
-  font-size: 20px;
-}
 .front-page-hero-bottom-cta {
   text-decoration: none;
   color: #f7f7f7;
   font-family: "Figtree", sans-serif;
   font-weight: 600;
-  font-size: 18px;
+  font-size: 15px;
   transition: font-size 0.2s ease-in-out;
 }
 .front-page-hero-bottom-cta:hover {
-  font-size: 20px;
+  font-size: 16px;
 }
 .front-page-hero-bottom-author {
   font-family: "Figtree", sans-serif;
@@ -380,9 +388,11 @@ body {
 .front-page-contact {
   width: 90vw;
   height: auto;
-  background: linear-gradient(180deg, rgba(57, 78, 108, 0.1) 0%, rgba(57, 78, 108, 0.5) 30%, rgba(57, 78, 108, 0.9) 75%);
+  background-image: url(../assets/img/hero-header.jpg);
+  background-size: cover;
+  background-position: center bottom;
   border-radius: 20px;
-  margin: 50px auto;
+  margin: 0 auto 50px auto;
   position: relative;
   z-index: 1;
 }
@@ -390,11 +400,11 @@ body {
   position: absolute;
   z-index: 2;
   inset: 0;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -404,6 +414,51 @@ body {
   justify-content: space-between;
   position: relative;
   z-index: 10;
+  padding: 40px;
+}
+
+.front-page-contact-content-main-intro {
+  font-family: "Figtree", sans-serif;
+  color: #d8b69c;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.front-page-contact-content-main-title {
+  font-family: "Figtree", sans-serif;
+  color: #f7f7f7;
+  font-size: 60px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 50px 0;
+}
+.front-page-contact-content-main-title span {
+  opacity: 0.5;
+}
+.front-page-contact-content-main-subtitle {
+  font-family: "Poppins", sans-serif;
+  color: #f7f7f7;
+  opacity: 0.8;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.front-page-contact-content-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.front-page-contact-content-links a {
+  text-decoration: none;
+  color: #f7f7f7;
+  font-family: "Figtree", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  transition: font-size 0.2s ease-in-out;
+}
+.front-page-contact-content-links a:hover {
+  font-size: 15.5px;
 }
 
 /****** Mise en page footer ******/
@@ -426,7 +481,7 @@ body {
 .footer-bottom p {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 15px;
   color: #3f4140;
 }
 
@@ -443,7 +498,7 @@ body {
   color: #3f4140;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 15px;
 }
 .footer-top ul a:hover {
   font-weight: 600;
@@ -461,7 +516,7 @@ body {
   color: #3f4140;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 15px;
 }
 .footer-menu a:hover {
   font-weight: 600;

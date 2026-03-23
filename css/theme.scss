@@ -68,6 +68,22 @@ body {
     margin: 0;
 }
 
+.primary-button {
+    background: $blueberry;
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    padding: 7px 18px;
+    text-decoration: none;
+    color: $white;
+    font-family: $font-title;
+    font-weight: 600;
+    font-size: 15px;
+    transition: font-size 0.2s ease-in-out;
+    &:hover {
+        font-size: 16px;
+    }
+}
+
 .glass-button {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 20px;
@@ -122,9 +138,17 @@ body {
     position: sticky;
     top: 20px;
     z-index: 1000;
-    transition: background 0.3s ease-in-out;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: background 0.6s ease-in-out;
     &.header--scrolled {
         background: linear-gradient(180deg, rgba(57, 78, 108, 0.60) 0%, rgba(57, 78, 108, 0.40) 75%, rgba(57, 78, 108, 0) 100%);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);    
+    }
+    & img {
+        width: 150px;
+        height: auto;
     }
 }
 
@@ -139,10 +163,10 @@ body {
         color: $white;
         font-family: $font-title;
         font-weight: 600;
-        font-size: 18px;
+        font-size: 15px;
         transition: font-size 0.2s ease-in-out;
         &:hover {
-            font-size: 20px;
+            font-size: 16px;
         }
     }
 }
@@ -195,31 +219,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    &-projet {
-        background: $blueberry;
-        border-radius: 20px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-        padding: 7px 18px;  
-        margin-right: 20px;
-        text-decoration: none;
-        color: $white;
-        font-family: $font-title;
-        font-weight: 600;
-        font-size: 18px;
-        transition: font-size 0.2s ease-in-out;
-            &:hover {
-                font-size: 20px;
-            }
-    }
     &-cta {
         text-decoration: none;
         color: $white;
         font-family: $font-title;
         font-weight: 600;
-        font-size: 18px;
+        font-size: 15px;
         transition: font-size 0.2s ease-in-out;
         &:hover {
-            font-size: 20px;
+            font-size: 16px;
         }
     }
     &-author {
@@ -409,22 +417,24 @@ body {
 .front-page-contact {
     width: 90vw;
     height: auto;
-    background: linear-gradient(180deg, rgba(57, 78, 108, 0.1) 0%, rgba(57, 78, 108, 0.5) 30%, rgba(57, 78, 108, 0.9) 75%);
+    background-image: url(../assets/img/hero-header.jpg);
+    background-size: cover;
+    background-position: center bottom;
     border-radius: 20px;
-    margin: 50px auto;
+    margin: 0 auto 50px auto;
     position: relative;
     z-index: 1;
     &-overlay {
         position: absolute;
         z-index: 2;
         inset: 0;
-        background: rgba(255, 255, 255, 0.2);
+        background: rgba(0, 0, 0, 0.5);
         border-radius: 20px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         border: 1px solid rgba(255, 255, 255, 0.3);
-     }
+    }
 }
 .front-page-contact-content {
     display: flex;
@@ -432,6 +442,53 @@ body {
     justify-content: space-between;
     position: relative;
     z-index: 10;
+    padding: 40px;
+}
+
+.front-page-contact-content-main {
+    &-intro {
+        font-family: $font-title;
+        color: $sand;
+        font-size: 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+    }
+    &-title {
+        font-family: $font-title;
+        color: $white;
+        font-size: 60px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin: 50px 0;
+        & span {
+            opacity: 0.5;
+        }
+    }
+    &-subtitle {
+        font-family: $font-body;
+        color: $white;
+        opacity: 0.8;
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+}
+
+.front-page-contact-content-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    & a {
+        text-decoration: none;
+        color: $white;
+        font-family: $font-title;
+        font-weight: 600;
+        font-size: 15px;
+        transition: font-size 0.2s ease-in-out;
+        &:hover {
+            font-size: 15.5px;
+        }
+    }
 }
 
 /****** Mise en page footer ******/
@@ -452,7 +509,7 @@ body {
         & p {
             font-family: $font-body;
             font-weight: 400;
-            font-size: 14px;
+            font-size: 15px;
             color: $dark-grey;
         }
     }
@@ -470,7 +527,7 @@ body {
         color: $dark-grey;
         font-family: $font-body;
         font-weight: 400;
-        font-size: 14px;
+        font-size: 15px;
         &:hover {
             font-weight: 600;
         }
@@ -488,7 +545,7 @@ body {
         color: $dark-grey;
         font-family: $font-body;
         font-weight: 400;
-        font-size: 14px;
+        font-size: 15px;
         &:hover {
             font-weight: 600;
         }
@@ -502,7 +559,6 @@ body {
             padding: 20px 20px 10px 20px;
             & ul {
                 gap: 50px;
-
             }
         }
         &-bottom {

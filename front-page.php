@@ -7,7 +7,7 @@
 		<h1 class="front-page-hero-title"> Je conçois des sites web <br> avec soin, <br> <span class="front-page-hero-opacity"> pensés pour des projets <br> qui ont du sens. </span> </h1>
 		<div class="front-page-hero-bottom"> 
 			<div>	
-				<a class="front-page-hero-bottom-projet" href="#projet">Voir mes projets</a>
+				<a class="primary-button" href="#projet">Voir mes projets</a>
 				<a class="front-page-hero-bottom-cta glass-button" href=#>Me contacter</a>
 			</div>
 			<p class="front-page-hero-bottom-author"> Manoëlle Ancion <br> <span class="front-page-hero-opacity"> Studio Endevenir </span></p>
@@ -109,17 +109,17 @@
 	<div class="front-page-contact"> 
 		<div class="front-page-contact-overlay"> </div>
 		<div class="front-page-contact-content"> 
-			<div class="front-page-contact-content-right"> 
-				<p> Un projet en tête ? </p>
-				<p> Rendons cela <br> <span> concret </span></p>
-				<p> Des idées mais tu ne sais pas par où commencer ? <br>Tu veux un site qui te ressemble enfin ? </p>
-				<a class="glass-button" href=#>Me contacter</a>
+			<div class="front-page-contact-content-main"> 
+				<p class="front-page-contact-content-main-intro"> Un projet en tête ? </p>
+				<p class="front-page-contact-content-main-title"> Rendons cela <br> <span> concret </span></p>
+				<p class="front-page-contact-content-main-subtitle"> Des idées mais tu ne sais pas par où commencer ? <br>Tu veux un site qui te ressemble enfin ? </p>
+				<a class="primary-button" href=#>Me contacter</a>
 			</div>
-			<div class="front-page-contact-content-left"> 
-				<a href="" class="glass-button">GitHub</a>
-				<a href="" class="glass-button">LinkedIn</a>
-				<a href="" class="glass-button">Instagram</a>
-				<a href="mailto:studio.endevenir@gmail.com" class="glass-button">Email</a>
+			<div class="front-page-contact-content-links"> 
+				<a href="https://github.com/mano-nla" class="glass-button" target="_blank" rel="noopener noreferrer">GitHub</a>
+				<a href="https://www.linkedin.com/in/mano%C3%ABlle-ancion-d%C3%A9veloppeuse-web/" class="glass-button" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+				<a href="https://www.instagram.com/studio_endevenir/" class="glass-button" target="_blank" rel="noopener noreferrer">Instagram</a>
+				<a href="mailto:studio.endevenir@gmail.com" class="glass-button" target="_blank" rel="noopener noreferrer">Email</a>
 			</div>	
 		</div>
 	</div>
