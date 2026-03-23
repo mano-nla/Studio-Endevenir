@@ -83,16 +83,35 @@ body {
 }
 
 .glass-card {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(221, 219, 212, 0.5);
     border-radius: 20px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 3px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(221, 219, 212, 1);
     padding: 7px 18px;
 }
 
-
+.front-page-section {
+    margin: 50px auto 0;
+    max-width: 90vw;
+    border-top: 1px solid $light-grey;
+    &-header {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin: 20px 0;
+        &-favicon {
+            width: 40px;
+            height: auto;
+        }
+        & h2 {
+            font-family: $font-title;
+            font-weight: bold;
+            font-size: 15px;
+            text-transform: uppercase;
+            color: $dark-grey;
+        }
+    }
+}
 
 /****** Mise en page header ******/
 .header {
@@ -218,10 +237,6 @@ body {
 
 /****** Mise en page section intro ******/
 .front-page-intro {
-    margin: 50px auto 0;
-    max-width: 80vw;
-    border-top: 1px solid $light-grey;
-    border-bottom: 1px solid $light-grey;
     &-content {
         max-width: 680px;
         margin: auto;
@@ -231,7 +246,7 @@ body {
         & p {
             font-family: $font-body;
             color: $dark-grey;
-            font-size: 25px;
+            font-size: 20px;
         }
     }
     &-accent {
@@ -241,8 +256,7 @@ body {
     &-signature {
         font-family: $font-accent;
         color: $dark-grey;
-        opacity: 0.8;
-        font-size: 20px;
+        font-size: 15px;
         max-width: 680px;
         margin: 25px auto;
         display: flex;
@@ -270,6 +284,156 @@ body {
         background-color: $sand; 
     }
 }
+
+/****** Mise en page section projets ******/
+.front-page-projets-description {
+    font-family: $font-body;
+    color: $dark-grey;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    & span {
+        font-family: $font-accent;
+        color: $blueberry;
+    }
+}
+
+/****** Mise en page section à propos ******/
+.front-page-a-propos-content {
+    display: flex;
+    gap: 60px;
+    &-photo {
+        width: 400px;
+        height: auto;
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+    &-presentation p {
+        margin-top: 0;
+    }
+}
+
+.dropdown-menu-item {
+    border-bottom: 1px solid $light-grey;
+    &-title {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 20px 0;
+        font-family: $font-body;
+        font-weight: bold;
+        font-size: 15px;
+        color: $dark-grey;
+        text-align: left;
+    }
+    &-icon {
+        transition: transform 0.3s ease;
+    }
+    &-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        & p {
+            margin: 10px 0;
+            font-family: $font-body;
+            color: $dark-grey;
+            font-size: 15px;
+        }
+    }
+}
+
+.dropdown-menu-item.is-open {
+    .dropdown-menu-item-icon {
+        transform: rotate(45deg); 
+    }
+    .dropdown-menu-item-content {
+        max-height: 500px; 
+    }
+}
+
+.carousel-title {
+    font-family: $font-title;
+    font-size: 15px;
+    color: $dark-grey;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 50px 0 10px 0;
+}
+
+.carousel {
+    overflow: hidden; 
+    width: 100%;
+    padding: 20px 0;
+    mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 10%,
+        black 90%,
+        transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 10%,
+        black 90%,
+        transparent 100%
+    );
+    &-items {
+        display: flex;
+        gap: 40px;
+        width: max-content; 
+        animation: scroll 30s linear infinite;
+        & span {
+            font-family: $font-body;
+            color: $dark-grey;
+            font-size: 15px;
+            font-weight: bold;
+        }
+    }
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%); 
+    }
+}
+
+/****** Mise en page section contact ******/
+.front-page-contact {
+    width: 90vw;
+    height: auto;
+    background: linear-gradient(180deg, rgba(57, 78, 108, 0.1) 0%, rgba(57, 78, 108, 0.5) 30%, rgba(57, 78, 108, 0.9) 75%);
+    border-radius: 20px;
+    margin: 50px auto;
+    position: relative;
+    z-index: 1;
+    &-overlay {
+        position: absolute;
+        z-index: 2;
+        inset: 0;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+     }
+}
+.front-page-contact-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+}
+
 /****** Mise en page footer ******/
 .footer {
     background-color: $sand;

@@ -70,13 +70,34 @@ body {
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(221, 219, 212, 0.5);
   border-radius: 20px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 3px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgb(221, 219, 212);
   padding: 7px 18px;
+}
+
+.front-page-section {
+  margin: 50px auto 0;
+  max-width: 90vw;
+  border-top: 1px solid #dddbd4;
+}
+.front-page-section-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+.front-page-section-header-favicon {
+  width: 40px;
+  height: auto;
+}
+.front-page-section-header h2 {
+  font-family: "Figtree", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #3f4140;
 }
 
 /****** Mise en page header ******/
@@ -202,12 +223,6 @@ body {
 }
 
 /****** Mise en page section intro ******/
-.front-page-intro {
-  margin: 50px auto 0;
-  max-width: 80vw;
-  border-top: 1px solid #dddbd4;
-  border-bottom: 1px solid #dddbd4;
-}
 .front-page-intro-content {
   max-width: 680px;
   margin: auto;
@@ -218,7 +233,7 @@ body {
 .front-page-intro-content p {
   font-family: "Poppins", sans-serif;
   color: #3f4140;
-  font-size: 25px;
+  font-size: 20px;
 }
 .front-page-intro-accent {
   font-family: "Lora", serif;
@@ -227,8 +242,7 @@ body {
 .front-page-intro-signature {
   font-family: "Lora", serif;
   color: #3f4140;
-  opacity: 0.8;
-  font-size: 20px;
+  font-size: 15px;
   max-width: 680px;
   margin: 25px auto;
   display: flex;
@@ -254,6 +268,142 @@ body {
   width: 40px;
   height: 2px;
   background-color: #d8b69c;
+}
+
+/****** Mise en page section projets ******/
+.front-page-projets-description {
+  font-family: "Poppins", sans-serif;
+  color: #3f4140;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+}
+.front-page-projets-description span {
+  font-family: "Lora", serif;
+  color: #394e6c;
+}
+
+/****** Mise en page section à propos ******/
+.front-page-a-propos-content {
+  display: flex;
+  gap: 60px;
+}
+.front-page-a-propos-content-photo {
+  width: 400px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+.front-page-a-propos-content-presentation p {
+  margin-top: 0;
+}
+
+.dropdown-menu-item {
+  border-bottom: 1px solid #dddbd4;
+}
+.dropdown-menu-item-title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 20px 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  color: #3f4140;
+  text-align: left;
+}
+.dropdown-menu-item-icon {
+  transition: transform 0.3s ease;
+}
+.dropdown-menu-item-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+.dropdown-menu-item-content p {
+  margin: 10px 0;
+  font-family: "Poppins", sans-serif;
+  color: #3f4140;
+  font-size: 15px;
+}
+
+.dropdown-menu-item.is-open .dropdown-menu-item-icon {
+  transform: rotate(45deg);
+}
+.dropdown-menu-item.is-open .dropdown-menu-item-content {
+  max-height: 500px;
+}
+
+.carousel-title {
+  font-family: "Figtree", sans-serif;
+  font-size: 15px;
+  color: #3f4140;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 50px 0 10px 0;
+}
+
+.carousel {
+  overflow: hidden;
+  width: 100%;
+  padding: 20px 0;
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+}
+.carousel-items {
+  display: flex;
+  gap: 40px;
+  width: -moz-max-content;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+}
+.carousel-items span {
+  font-family: "Poppins", sans-serif;
+  color: #3f4140;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+/****** Mise en page section contact ******/
+.front-page-contact {
+  width: 90vw;
+  height: auto;
+  background: linear-gradient(180deg, rgba(57, 78, 108, 0.1) 0%, rgba(57, 78, 108, 0.5) 30%, rgba(57, 78, 108, 0.9) 75%);
+  border-radius: 20px;
+  margin: 50px auto;
+  position: relative;
+  z-index: 1;
+}
+.front-page-contact-overlay {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.front-page-contact-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
 }
 
 /****** Mise en page footer ******/
