@@ -35,7 +35,7 @@ $font-accent: 'Lora', serif;
 h1 {
     font-family: $font-title;
     font-weight: bold;
-    font-size: 70px;
+    font-size: 60px;
     text-transform: uppercase;
     color: $white;
 }
@@ -99,13 +99,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px;
+    padding: 20px;
     position: sticky;
-    top: 10px;
+    top: 20px;
     z-index: 1000;
     transition: background 0.3s ease-in-out;
     &.header--scrolled {
-        background: linear-gradient(180deg, rgba(57, 78, 108, 0.60) 0%, rgba(57, 78, 108, 0.60) 75%, rgba(57, 78, 108, 0) 100%);
+        background: linear-gradient(180deg, rgba(57, 78, 108, 0.60) 0%, rgba(57, 78, 108, 0.40) 75%, rgba(57, 78, 108, 0) 100%);
     }
 }
 
@@ -133,25 +133,143 @@ body {
     background-image: url(../assets/img/hero-header.jpg);
     background-size: cover;
     background-position: center top;
-    width: 98vw;
-    height: 92vh; 
-    border-radius: 30px;
-    position: relative;
-    margin: auto;
-    margin-top: -140px;
-    z-index: 1;
-}
-
-.front-page-hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.5) 30%, rgba(0,0,0,0.9) 75%);
-    border-radius: 30px;
+    height: 100vh; 
+    position: relative;
+    margin-top: -120px;
+    z-index: 1;
+    &-overlay {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.5) 30%, rgba(0,0,0,0.9) 75%);
+    }
+    &-content {
+        position: relative;
+        z-index: 10;
+        padding: 180px 65px 0 65px;
+    }
+    &-title {
+        margin: 50px 0;
+    }
 }
 
+.front-page-hero-subtitle {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: $sand;
+    font-family: $font-title;
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+    &::before {
+        content: '';
+        display: block;
+        width: 40px;
+        height: 2px;
+        background-color: $sand; 
+    }
+}
+
+.front-page-hero-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-projet {
+        background: $blueberry;
+        border-radius: 20px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+        padding: 7px 18px;  
+        margin-right: 20px;
+        text-decoration: none;
+        color: $white;
+        font-family: $font-title;
+        font-weight: 600;
+        font-size: 18px;
+        transition: font-size 0.2s ease-in-out;
+            &:hover {
+                font-size: 20px;
+            }
+    }
+    &-cta {
+        text-decoration: none;
+        color: $white;
+        font-family: $font-title;
+        font-weight: 600;
+        font-size: 18px;
+        transition: font-size 0.2s ease-in-out;
+        &:hover {
+            font-size: 20px;
+        }
+    }
+    &-author {
+        font-family: $font-title;
+        font-weight: bold;
+        font-size: 15px;
+        color: $white;  
+        text-transform: uppercase;
+    }
+}
+
+.front-page-hero-opacity {
+    opacity: 0.5;
+}
+
+/****** Mise en page section intro ******/
+.front-page-intro {
+    margin: 50px auto 0;
+    max-width: 80vw;
+    border-top: 1px solid $light-grey;
+    border-bottom: 1px solid $light-grey;
+    &-content {
+        max-width: 680px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & p {
+            font-family: $font-body;
+            color: $dark-grey;
+            font-size: 25px;
+        }
+    }
+    &-accent {
+        font-family: $font-accent;
+        color: $blueberry;
+    }
+    &-signature {
+        font-family: $font-accent;
+        color: $dark-grey;
+        opacity: 0.8;
+        font-size: 20px;
+        max-width: 680px;
+        margin: 25px auto;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+}
+
+.front-page-intro-subtitle {
+    color: $sand;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    &::before{
+        content: '';
+        display: block;
+        width: 40px;
+        height: 2px;
+        background-color: $sand; 
+    }
+    &::after{
+        content: '';
+        display: block;
+        width: 40px;
+        height: 2px;
+        background-color: $sand; 
+    }
+}
 /****** Mise en page footer ******/
 .footer {
     background-color: $sand;
