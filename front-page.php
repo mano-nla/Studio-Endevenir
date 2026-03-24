@@ -8,7 +8,7 @@
 		<div class="front-page-hero-bottom"> 
 			<div>	
 				<a class="primary-button" href="#projet">Voir mes projets</a>
-				<a class="front-page-hero-bottom-cta glass-button" href=#>Me contacter</a>
+				<a class="front-page-hero-bottom-cta glass-button" href="#" data-open-modal>Me contacter</a>
 			</div>
 			<p class="front-page-hero-bottom-author"> Manoëlle Ancion <br> <span class="front-page-hero-opacity"> Studio Endevenir </span></p>
 		</div>
@@ -29,23 +29,29 @@
 	</div>
 	<p class="front-page-projets-description">Mes derniers projets, <br>où chaque site est conçu pour <br><span>révéler ton identité.</span></p>
 	<div class="front-page-projets-cards"> 
-		<?php
-    		$args = array(
-    			'post_type'      => 'projet',
-    			'posts_per_page' => 3,
-    			'paged'          => 1,
-				'orderby' => 'date',
-				'order'   => 'DESC',
-			);
-			$my_query = new WP_Query( $args );
-			if( $my_query->have_posts() ) {
-				while( $my_query->have_posts() ) { 
-					$my_query->the_post();
-        			get_template_part( 'template_parts/card-projet' );
-					}
-			}
-			wp_reset_postdata();
-			?>
+		<div class="swiper projets-swiper">
+    		<div class="swiper-wrapper">
+    		    <?php
+        		$args = array(
+            		'post_type'      => 'projet',
+            		'posts_per_page' => -1, 
+            		'orderby'        => 'date',
+            		'order'          => 'DESC',
+        		);
+        		$my_query = new WP_Query( $args );
+        		if ( $my_query->have_posts() ) {
+            		while ( $my_query->have_posts() ) {
+                		$my_query->the_post();
+                		echo '<div class="swiper-slide">';
+                		get_template_part( 'template_parts/card-projet' );
+                		echo '</div>';
+            		}
+        		}
+        		wp_reset_postdata();
+        		?>
+    		</div>
+			<div class="swiper-pagination"></div>
+		</div>
 	</div>
 </section>
 <section id="a-propos" class="front-page-section">
@@ -132,7 +138,7 @@
 				<p class="front-page-contact-content-main-intro"> Un projet en tête ? </p>
 				<p class="front-page-contact-content-main-title"> Rendons cela <br> <span> concret </span></p>
 				<p class="front-page-contact-content-main-subtitle"> Des idées mais tu ne sais pas par où commencer ? <br>Tu veux un site qui te ressemble enfin ? </p>
-				<a class="primary-button" href=#>Me contacter</a>
+				<a href="#" data-open-modal class="primary-button">Me contacter</a>
 			</div>
 			<div class="front-page-contact-content-links"> 
 				<a href="https://github.com/mano-nla" class="glass-button" target="_blank" rel="noopener noreferrer">GitHub</a>

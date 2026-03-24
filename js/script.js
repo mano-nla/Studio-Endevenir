@@ -1,14 +1,17 @@
 /*** effet de scroll sur le header ***/
-window.addEventListener('scroll', () => {
+document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('.header');
-    
     if (!header) return;
 
-    if (window.scrollY > 10) {
-        header.classList.add('header--scrolled');
-    } else {
-        header.classList.remove('header--scrolled');
+    function handleScroll() {
+        if (window.scrollY > 10) {
+            header.classList.add('header--scrolled');
+        } else {
+            header.classList.remove('header--scrolled');
+        }
     }
+    handleScroll();
+       window.addEventListener('scroll', handleScroll);
 });
 
 /*** effet de menu déroulant dans la section à propos ***/
@@ -26,4 +29,43 @@ dropdownItems.forEach(item => {
             item.classList.add('is-open');
         }
     });
+});
+
+/*** ouverture de la modale de contact ***/
+document.addEventListener('DOMContentLoaded', () => {
+
+    const modal = document.getElementById('modal-contact');
+    const openButtons = document.querySelectorAll('[data-open-modal]');
+    const closeButtons = document.querySelectorAll('[data-close-modal]');
+
+    if (!modal) return;
+
+    const openModal = () => {
+        modal.classList.add('is-active');
+        document.body.style.overflow = 'hidden';
+
+    };
+
+    const closeModal = () => {
+        modal.classList.remove('is-active');
+        document.body.style.overflow = '';
+    };
+
+    openButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            openModal();
+        });
+    });
+
+    closeButtons.forEach(button => {
+        button.addEventListener('click', closeModal);
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeModal();
+        }
+    });
+
 });

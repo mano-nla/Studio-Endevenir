@@ -2,7 +2,9 @@
     <article class="card-projet-container"> 
         <?php $couleur = get_post_meta(get_the_ID(), 'couleur_principale', true); ?>
         <div class="card-projet-container-image" style="background-color: <?php echo esc_attr($couleur); ?>;">
-            <img src="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'medium' ); ?>" alt="<?php the_title(); ?>">
+            <?php if ( has_post_thumbnail() ) : ?>
+                <img src="<?php echo get_the_post_thumbnail_url( get_the_ID(), 'medium' ); ?>" alt="<?php the_title(); ?>">
+            <?php endif; ?>        
         </div>
         <div class="card-projet-container-content">
             <h3> <?php the_title(); ?> </h3>
