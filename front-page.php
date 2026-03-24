@@ -28,6 +28,25 @@
 		<h2 class="front-page-section-header-subtitle glass-card"> Projets</h2>
 	</div>
 	<p class="front-page-projets-description">Mes derniers projets, <br>où chaque site est conçu pour <br><span>révéler ton identité.</span></p>
+	<div class="front-page-projets-cards"> 
+		<?php
+    		$args = array(
+    			'post_type'      => 'projet',
+    			'posts_per_page' => 3,
+    			'paged'          => 1,
+				'orderby' => 'date',
+				'order'   => 'DESC',
+			);
+			$my_query = new WP_Query( $args );
+			if( $my_query->have_posts() ) {
+				while( $my_query->have_posts() ) { 
+					$my_query->the_post();
+        			get_template_part( 'template_parts/card-projet' );
+					}
+			}
+			wp_reset_postdata();
+			?>
+	</div>
 </section>
 <section id="a-propos" class="front-page-section">
 	<div class="front-page-section-header"> 
@@ -82,7 +101,7 @@
    	 		<span class="glass-card">SASS</span>
     	 	<span class="glass-card">JavaScript</span>
        		<span class="glass-card">PHP</span>
-     		<span class="glass-card">ACF</span>
+     		<span class="glass-card">SCF</span>
    	 		<span class="glass-card">CPT</span>
         	<span class="glass-card">Figma</span>
        		<span class="glass-card">Elementor</span>
@@ -93,7 +112,7 @@
      		<span class="glass-card">SASS</span>
    	 		<span class="glass-card">JavaScript</span>
        	 	<span class="glass-card">PHP</span>
-       		<span class="glass-card">ACF</span>
+       		<span class="glass-card">SCF</span>
      		<span class="glass-card">CPT</span>
     		<span class="glass-card">Figma</span>
        	 	<span class="glass-card">Elementor</span>

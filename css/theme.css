@@ -278,6 +278,54 @@ body {
   background-color: #d8b69c;
 }
 
+/****** Mise en page cards projet ******/
+.card-projet-link {
+  text-decoration: none;
+  margin: auto;
+}
+
+.card-projet-container {
+  width: 400px;
+  background: #f7f7f7;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-projet-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+.card-projet-container-image {
+  height: 300px;
+  border-radius: 20px 20px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-projet-container-content {
+  padding: 20px;
+}
+.card-projet-container-content p, .card-projet-container-content-type {
+  font-family: "Poppins", sans-serif;
+  color: #3f4140;
+  font-size: 15px;
+  margin: 0;
+}
+
+.card-projet-container-content h3 {
+  font-family: "Figtree", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #3f4140;
+  margin: 0 0 10px 0;
+}
+
 /****** Mise en page section projets ******/
 .front-page-projets-description {
   font-family: "Poppins", sans-serif;
@@ -289,6 +337,13 @@ body {
 .front-page-projets-description span {
   font-family: "Lora", serif;
   color: #394e6c;
+}
+
+.front-page-projets-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  margin: 30px auto;
 }
 
 /****** Mise en page section à propos ******/

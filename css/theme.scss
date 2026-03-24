@@ -293,6 +293,54 @@ body {
     }
 }
 
+/****** Mise en page cards projet ******/
+.card-projet-link{
+    text-decoration: none;
+    margin: auto;
+}
+
+.card-projet-container {
+    width: 400px;
+    background: #f7f7f7;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+    }
+}
+
+.card-projet-container-image {
+    height: 300px;
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-projet-container-content {
+    padding: 20px;
+    & p, &-type {
+        font-family: $font-body;
+        color: $dark-grey;
+        font-size: 15px;
+        margin: 0;
+    }
+}
+.card-projet-container-content h3 {
+    font-family: $font-title;
+    font-weight: bold;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: $dark-grey;
+    margin: 0 0 10px 0;
+}
+
+
 /****** Mise en page section projets ******/
 .front-page-projets-description {
     font-family: $font-body;
@@ -304,6 +352,13 @@ body {
         font-family: $font-accent;
         color: $blueberry;
     }
+}
+
+.front-page-projets-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;        
+    gap: 20px; 
+    margin: 30px auto;
 }
 
 /****** Mise en page section à propos ******/
