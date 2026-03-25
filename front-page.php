@@ -16,14 +16,14 @@
 </section>
 <section class="front-page-section front-page-intro">
 	<div class="front-page-intro-content">
-		<h2 class="front-page-intro-subtitle"> Ma philosophie </h2>
+		<h2 class="front-page-intro-subtitle reveal"> Ma philosophie </h2>
 		<p>“Studio Endevenir, ce sont des sites web conçus avec <span class="front-page-intro-accent">intention</span>, pensés pour refléter <span class="front-page-intro-accent">ton identité</span> et valoriser ce que tu fais.</p>
 		<p>Un espace digital créé <span class="front-page-intro-accent">avec soin</span>, pour mettre en lumière <span class="front-page-intro-accent">ton univers</span> et donner <span class="front-page-intro-accent">du sens</span> à ta présence en ligne.” </p>
 	</div>
 	<p class="front-page-intro-signature"> Manoëlle </p>
 </section>
 <section id="projet" class="front-page-section">
-	<div class="front-page-section-header"> 
+	<div class="front-page-section-header reveal"> 
 		<img src="<?php echo get_template_directory_uri(); ?>/assets/img/favicon_beige.svg" alt="Favicon en version beige" class="front-page-section-header-favicon">	
 		<h2 class="front-page-section-header-subtitle glass-card"> Projets</h2>
 	</div>
@@ -55,7 +55,7 @@
 	</div>
 </section>
 <section id="a-propos" class="front-page-section">
-	<div class="front-page-section-header"> 
+	<div class="front-page-section-header reveal"> 
 		<img src="<?php echo get_template_directory_uri(); ?>/assets/img/favicon_beige.svg" alt="Favicon en version beige" class="front-page-section-header-favicon">
 		<h2 class="front-page-section-header-subtitle glass-card"> À propos</h2>
 	</div>
@@ -127,7 +127,7 @@
 	</div>
 </section>
 <section id="contact" class="front-page-section">
-	<div class="front-page-section-header"> 
+	<div class="front-page-section-header reveal"> 
 		<img src="<?php echo get_template_directory_uri(); ?>/assets/img/favicon_beige.svg" alt="Favicon en version beige" class="front-page-section-header-favicon">	
 		<h2 class="front-page-section-header-subtitle glass-card"> Contact</h2>
 	</div>

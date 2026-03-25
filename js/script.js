@@ -69,3 +69,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+
+/*** Apparition des sections au scroll ***/
+const observer = new IntersectionObserver((sections) => {
+    sections.forEach(section => {
+        if (section.isIntersecting) {
+            section.target.classList.add('is-visible');
+            observer.unobserve(section.target);
+        }
+    });
+}, {
+    threshold: 0.50
+});
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));

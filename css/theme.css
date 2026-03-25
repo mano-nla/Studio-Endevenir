@@ -117,6 +117,16 @@ body {
   color: #3f4140;
 }
 
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /****** Mise en page header ******/
 .header {
   display: flex;
@@ -183,6 +193,9 @@ body {
 }
 .front-page-hero-title {
   margin: 50px 0;
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
 }
 
 .front-page-hero-subtitle {
@@ -193,6 +206,9 @@ body {
   font-family: "Figtree", sans-serif;
   font-weight: bold;
   font-size: 15px;
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
   text-transform: uppercase;
 }
 .front-page-hero-subtitle::before {
@@ -207,6 +223,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 0.8s;
+  opacity: 0;
 }
 .front-page-hero-bottom-cta {
   text-decoration: none;
@@ -231,6 +250,16 @@ body {
   opacity: 0.5;
 }
 
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /****** Mise en page section intro ******/
 .front-page-intro-content {
   max-width: 680px;
@@ -372,7 +401,7 @@ body {
   gap: 60px;
 }
 .front-page-a-propos-content-photo {
-  width: 400px;
+  width: 30%;
   height: auto;
   border-radius: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
@@ -395,7 +424,7 @@ body {
   padding: 20px 0;
   font-family: "Poppins", sans-serif;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 20px;
   color: #3f4140;
   text-align: left;
 }
@@ -411,7 +440,7 @@ body {
   margin: 10px 0;
   font-family: "Poppins", sans-serif;
   color: #3f4140;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .dropdown-menu-item.is-open .dropdown-menu-item-icon {
@@ -717,6 +746,49 @@ body {
   .footer-menu li {
     margin: 15px;
   }
+  .front-page-hero-content h1 {
+    font-size: 40px;
+  }
+  .front-page-a-propos-content-presentation p {
+    font-size: 15px;
+  }
+  .front-page-a-propos-content-photo {
+    max-height: 277px;
+  }
+  .dropdown-menu-item-title {
+    font-size: 15px;
+    padding: 10px 0;
+  }
+  .dropdown-menu-item-content p {
+    font-size: 15px;
+  }
+  .front-page-contact-content-main-title {
+    font-size: 40px;
+  }
+  .front-page-contact-content-main-subtitle {
+    font-size: 15px;
+  }
+  .modal-content {
+    padding: 0 20px;
+  }
+  .modal-content-header {
+    margin: 15px 0;
+  }
+  .modal-content-header p:first-child {
+    font-size: 15px;
+  }
+  .modal-content-header p:last-child {
+    font-size: 12px;
+  }
+  .modal-content-form label {
+    font-size: 10px;
+  }
+  .wpcf7-response-output {
+    display: none;
+  }
+  .wpcf7-not-valid-tip {
+    font-size: 10px;
+  }
 }
 /****** Responsive mobile ******/
 @media (max-width: 450px) {
@@ -740,6 +812,23 @@ body {
   .front-page-hero-overlay {
     background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.9) 90%);
   }
+  .front-page-hero-subtitle {
+    font-size: 15px;
+  }
+  .front-page-hero-subtitle::before {
+    display: none;
+  }
+  .front-page-hero-content {
+    padding: 180px 20px 0 20px;
+  }
+  .front-page-hero-content h1 {
+    font-size: 30px;
+    margin: 40px 0;
+  }
+  .front-page-hero-bottom {
+    flex-direction: column;
+    gap: 20px;
+  }
   .footer-bottom p {
     font-size: 12px;
     margin-bottom: 10px;
@@ -755,5 +844,126 @@ body {
   }
   .footer-menu a {
     font-size: 12px;
+  }
+  .front-page-intro-content p {
+    font-size: 15px;
+  }
+  .front-page-intro-accent {
+    font-size: 15px;
+  }
+  .front-page-intro-signature {
+    font-size: 15px;
+  }
+  .front-page-intro-subtitle {
+    margin-top: 15px;
+    font-size: 15px;
+  }
+  .front-page-intro-subtitle::before {
+    width: 20px;
+  }
+  .front-page-intro-subtitle::after {
+    width: 20px;
+  }
+  .front-page-section-header-favicon {
+    width: 30px;
+    height: auto;
+  }
+  .front-page-section-header h2 {
+    font-size: 15px;
+  }
+  .front-page-projets-description {
+    font-size: 15px;
+  }
+  .card-projet-container-image {
+    height: 250px;
+  }
+  .card-projet-container-content {
+    padding: 15px;
+  }
+  .card-projet-container-content p, .card-projet-container-content-type {
+    font-size: 12px;
+  }
+  .card-projet-container-content h3 {
+    font-size: 15px;
+  }
+  .front-page-a-propos-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .front-page-a-propos-content-photo {
+    width: 80%;
+    max-height: none;
+    margin: auto;
+  }
+  .dropdown-menu-item-title {
+    font-size: 15px;
+  }
+  .dropdown-menu-item-content p {
+    font-size: 15px;
+  }
+  .carousel-items {
+    gap: 20px;
+  }
+  .carousel-items span {
+    font-size: 12px;
+  }
+  .front-page-contact-content {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .front-page-contact-content-main {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .front-page-contact-content-main-title {
+    font-size: 30px;
+    margin: 40px 0;
+  }
+  .front-page-contact-content-main-subtitle {
+    font-size: 15px;
+    margin: 0;
+  }
+  .front-page-contact-content-main a {
+    font-size: 12px;
+    margin-top: 20px;
+  }
+  .front-page-contact-content-links {
+    flex-direction: row;
+    gap: 10px;
+  }
+  .front-page-contact-content-links a {
+    font-size: 10px;
+  }
+  .modal-content {
+    padding: 0 10px;
+  }
+  .modal-content-header {
+    margin: 10px 0;
+  }
+  .modal-content-header p:first-child {
+    font-size: 12px;
+  }
+  .modal-content-header p:last-child {
+    font-size: 10px;
+  }
+  .modal-content-form label {
+    font-size: 10px;
+  }
+  .modal-content-form-box {
+    width: 97%;
+  }
+  .modal-content-form textarea {
+    min-width: 97%;
+  }
+  .wpcf7-response-output {
+    display: none;
+  }
+  .wpcf7-not-valid-tip {
+    font-size: 10px;
+  }
+  .modal-content-form-name {
+    width: 98%;
   }
 }/*# sourceMappingURL=theme.css.map */
