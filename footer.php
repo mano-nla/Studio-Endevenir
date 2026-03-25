@@ -4,9 +4,9 @@
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="Logo Studio Endevenir">
         </a>
         <ul> 
-            <li><a href="#projet">Projets</a></li>
-            <li><a href="#a-propos">À propos</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="<?php echo home_url('/'); ?>#projet">Projets</a></li>
+            <li><a href="<?php echo home_url('/'); ?>#a-propos">À propos</a></li>
+            <li><a href="<?php echo home_url('/'); ?>#contact">Contact</a></li>
         </ul>
     </div>
     <div class="footer-bottom"> 

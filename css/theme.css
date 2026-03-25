@@ -141,7 +141,7 @@ body {
   transition: background 0.6s ease-in-out;
 }
 .header.header--scrolled {
-  background: linear-gradient(180deg, rgba(57, 78, 108, 0.6) 0%, rgba(57, 78, 108, 0.4) 75%, rgba(57, 78, 108, 0) 100%);
+  background: linear-gradient(180deg, rgba(63, 65, 64, 0.9) 0%, rgba(63, 65, 64, 0) 100%);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
@@ -780,15 +780,6 @@ body {
   .modal-content-header p:last-child {
     font-size: 12px;
   }
-  .modal-content-form label {
-    font-size: 10px;
-  }
-  .wpcf7-response-output {
-    display: none;
-  }
-  .wpcf7-not-valid-tip {
-    font-size: 10px;
-  }
 }
 /****** Responsive mobile ******/
 @media (max-width: 450px) {
@@ -797,8 +788,6 @@ body {
     justify-content: center;
     gap: 15px;
     padding: 20px;
-    position: sticky;
-    top: 0;
   }
   .header-nav {
     padding-left: 0;
@@ -937,7 +926,7 @@ body {
     font-size: 10px;
   }
   .modal-content {
-    padding: 0 10px;
+    padding: 0 7px;
   }
   .modal-content-header {
     margin: 10px 0;
@@ -946,22 +935,14 @@ body {
     font-size: 12px;
   }
   .modal-content-header p:last-child {
-    font-size: 10px;
-  }
-  .modal-content-form label {
-    font-size: 10px;
+    font-size: 12px;
   }
   .modal-content-form-box {
     width: 97%;
+    font-size: 12px;
   }
   .modal-content-form textarea {
     min-width: 97%;
-  }
-  .wpcf7-response-output {
-    display: none;
-  }
-  .wpcf7-not-valid-tip {
-    font-size: 10px;
   }
   .modal-content-form-name {
     width: 98%;

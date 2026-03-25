@@ -1,0 +1,115 @@
+/****** Chargement des polices Google Fonts ******/
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Figtree';
+  src: url('../assets/fonts/Figtree-VariableFont_wght.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: url('../assets/fonts/Lora-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+/****** Déclaration variables CSS ******/
+
+$blueberry: #394e6c;
+$dark-grey: #3f4140;
+$sand: #d8b69c;
+$light-grey: #dddbd4;
+$white: #f7f7f7;
+
+$font-title: 'Figtree', sans-serif;
+$font-body: 'Poppins', sans-serif;
+$font-accent: 'Lora', serif;
+
+h1 {
+    font-family: $font-title;
+    font-weight: bold;
+    font-size: 60px;
+    text-transform: uppercase;
+    color: $white;
+}
+
+h2 {
+    font-family: $font-title;
+    font-weight: bold;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: $white;
+}
+
+h3 {
+    font-family: $font-title;
+    font-weight: 600;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: $dark-grey;
+}
+
+p {
+    font-family: $font-body;
+    font-weight: 400;
+    font-size: 20px;
+    color: $dark-grey;
+}
+
+/****** Mise en page du hero ******/
+.single-hero {
+    height: 90vh;
+    position: relative; 
+    z-index: 1;
+    &-overlay {
+        position: absolute;
+        z-index: 2;
+        inset: 20px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 20px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+}
+
+ .single-hero-content {
+    z-index: 10;
+    position: relative;
+    &-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px;
+        & img {
+            width: 150px;
+            height: auto;
+        }
+        &-link {
+            text-decoration: none;
+            color: $dark-grey;
+            font-family: $font-title;
+            font-weight: 600;
+            font-size: 15px;
+            background: rgba(255, 255, 255, 0.45);
+            border-radius: 20px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 7px 18px;
+            transition: font-size 0.2s ease-in-out;
+            &:hover {
+                font-size: 16px;
+                border: 1px solid rgba(255, 255, 255, 1);
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            }
+        }
+    }
+}
