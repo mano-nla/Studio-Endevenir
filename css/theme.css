@@ -233,6 +233,7 @@ body {
   font-family: "Figtree", sans-serif;
   font-weight: 600;
   font-size: 15px;
+  margin-left: 15px;
   transition: font-size 0.2s ease-in-out;
 }
 .front-page-hero-bottom-cta:hover {
@@ -794,6 +795,9 @@ body {
   }
   .header-nav a {
     font-size: 12px;
+  }
+  .header-nav a:hover {
+    font-size: 13px;
   }
   .front-page-hero {
     margin-top: -170px;

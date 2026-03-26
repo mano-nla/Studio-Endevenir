@@ -55,22 +55,40 @@ p {
   height: 90vh;
   position: relative;
   z-index: 1;
+  background: linear-gradient(180deg, var(--couleur-projet) 0%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0) 100%);
 }
 .single-hero-overlay {
   position: absolute;
   z-index: 2;
   inset: 20px;
-  background: rgba(255, 255, 255, 0.2);
+  background: linear-gradient(0deg, rgba(57, 78, 108, 0.7) 0%, rgba(57, 78, 108, 0) 100%);
   border-radius: 20px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.single-hero-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  z-index: 100;
+}
+.single-hero-logo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .single-hero-content {
   z-index: 10;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90vh;
 }
 .single-hero-content-nav {
   display: flex;
@@ -84,11 +102,11 @@ p {
 }
 .single-hero-content-nav-link {
   text-decoration: none;
-  color: #3f4140;
+  color: #f7f7f7;
   font-family: "Figtree", sans-serif;
   font-weight: 600;
   font-size: 15px;
-  background: rgba(255, 255, 255, 0.45);
+  background: rgba(58, 78, 108, 0.2);
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -99,4 +117,111 @@ p {
   font-size: 16px;
   border: 1px solid rgb(255, 255, 255);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.single-hero-content-main {
+  max-width: 40%;
+}
+.single-hero-content-main h2 {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: var(--couleur-projet);
+  font-family: "Figtree", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+  text-transform: uppercase;
+}
+.single-hero-content-main h2::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background-color: var(--couleur-projet);
+}
+.single-hero-content-main h1 {
+  margin: 30px 0 0;
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+
+.single-hero-content-data {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 50px;
+}
+.single-hero-content-data-aside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.single-hero-content-data-aside-date {
+  color: var(--couleur-projet);
+  font-family: "Figtree", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+.single-hero-content-data-aside-link {
+  color: #f7f7f7;
+  font-family: "Figtree", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+.single-hero-content-data-aside-link:hover {
+  font-size: 16px;
+}
+
+/****** Responsive tablette ******/
+@media (max-width: 768px) {
+  .single-hero-logo {
+    width: 300px;
+    height: 300px;
+  }
+}
+/****** Responsive mobile ******/
+@media (max-width: 450px) {
+  .single-hero-content-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .single-hero-content-nav-link {
+    font-size: 12px;
+  }
+  .single-hero-content-nav-link:hover {
+    font-size: 13px;
+  }
+  .single-hero-logo {
+    width: 200px;
+    height: 200px;
+  }
+  .single-hero-content-main {
+    max-width: none;
+  }
+  .single-hero-content-main h1 {
+    font-size: 30px;
+    margin: 0;
+  }
+  .single-hero-content-data {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .single-hero-content-data-aside {
+    align-items: flex-start;
+  }
+  .single-hero-content-data-aside-date {
+    font-size: 12px;
+  }
+  .single-hero-content-data-aside-link {
+    font-size: 12px;
+  }
+  .single-hero-content-data-aside-link:hover {
+    font-size: 13px;
+  }
 }/*# sourceMappingURL=single-projet.css.map */

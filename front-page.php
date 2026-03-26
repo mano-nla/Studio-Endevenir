@@ -7,7 +7,7 @@
 		<h1 class="front-page-hero-title"> Je conçois des sites web <br> avec soin, <br> <span class="front-page-hero-opacity"> pensés pour des projets <br> qui ont du sens. </span> </h1>
 		<div class="front-page-hero-bottom"> 
 			<div>	
-				<a class="primary-button" href="#projet">Voir mes projets</a>
+				<a class="primary-button" href="#projet">Voir mes projets → </a>
 				<a class="front-page-hero-bottom-cta glass-button" href="#" data-open-modal>Me contacter</a>
 			</div>
 			<p class="front-page-hero-bottom-author"> Manoëlle Ancion <br> <span class="front-page-hero-opacity"> Studio Endevenir </span></p>
@@ -138,7 +138,7 @@
 				<p class="front-page-contact-content-main-intro"> Un projet en tête ? </p>
 				<p class="front-page-contact-content-main-title"> Rendons cela <br> <span> concret </span></p>
 				<p class="front-page-contact-content-main-subtitle"> Des idées mais tu ne sais pas par où commencer ? <br>Tu veux un site qui te ressemble enfin ? </p>
-				<a href="#" data-open-modal class="primary-button">Me contacter</a>
+				<a href="#" data-open-modal class="primary-button">Me contacter → </a>
 			</div>
 			<div class="front-page-contact-content-links"> 
 				<a href="https://github.com/mano-nla" class="glass-button" target="_blank" rel="noopener noreferrer">GitHub</a>
