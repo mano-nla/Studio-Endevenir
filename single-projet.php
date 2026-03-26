@@ -62,13 +62,16 @@
     <div class="single-detail-items reveal"> 
         <p class="single-detail-items-subtitle"> Technologies </p>
         <h2 class="single-detail-items-title"> La stack </h2>
-        <p class="single-detail-items-technologie"> 
-            <?php $technologie_terms = get_the_terms( get_the_ID(), 'technologie' );
-			if ( ! empty( $technologie_terms ) && ! is_wp_error( $technologie_terms ) ) {
-                foreach ( $technologie_terms as $term ) {
-                    echo esc_html( $term->name ) . ' ';}
-            } ?>
-        </p>
+        <div class="single-detail-items-technologies">
+            <?php 
+            $technologie_terms = get_the_terms(get_the_ID(), 'technologie');
+            if (!empty($technologie_terms) && !is_wp_error($technologie_terms)) {
+                foreach ($technologie_terms as $term) {
+                    echo '<span class="single-detail-items-technologie">' . esc_html($term->name) . '</span>';
+                }
+            } 
+            ?>
+        </div>
     </div>
 </section>
 

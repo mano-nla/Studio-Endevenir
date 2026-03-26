@@ -55,16 +55,7 @@ p {
   height: 90vh;
   position: relative;
   z-index: 1;
-  background: linear-gradient(180deg, var(--couleur-projet) 0%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0) 100%);
-}
-.single-hero-overlay {
-  position: absolute;
-  z-index: 2;
-  inset: 20px;
-  background: linear-gradient(0deg, rgba(57, 78, 108, 0.7) 0%, rgba(57, 78, 108, 0) 100%);
-  border-radius: 20px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: linear-gradient(180deg, var(--couleur-projet) 0%, rgba(255, 255, 255, 0) 100%);
 }
 .single-hero-logo {
   position: absolute;
@@ -102,13 +93,13 @@ p {
 }
 .single-hero-content-nav-link {
   text-decoration: none;
-  color: #f7f7f7;
+  color: #394e6c;
   font-family: "Figtree", sans-serif;
   font-weight: 600;
   font-size: 15px;
-  background: rgba(58, 78, 108, 0.2);
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 7px 18px;
   transition: font-size 0.2s ease-in-out;
@@ -116,7 +107,7 @@ p {
 .single-hero-content-nav-link:hover {
   font-size: 16px;
   border: 1px solid rgb(255, 255, 255);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 .single-hero-content-main {
@@ -144,6 +135,7 @@ p {
 }
 .single-hero-content-main h1 {
   margin: 30px 0 0;
+  color: var(--couleur-projet);
   animation: fadeUp 0.8s ease forwards;
   animation-delay: 0.5s;
   opacity: 0;
@@ -168,7 +160,7 @@ p {
   text-transform: uppercase;
 }
 .single-hero-content-data-aside-link {
-  color: #f7f7f7;
+  color: var(--couleur-projet);
   font-family: "Figtree", sans-serif;
   font-weight: 600;
   font-size: 15px;
@@ -226,6 +218,12 @@ p {
   font-size: 15px;
   color: #3f4140;
 }
+.single-detail-items-technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 15px;
+}
 .single-detail-items-technologie {
   color: #f7f7f7;
   font-family: "Figtree", sans-serif;
@@ -234,7 +232,7 @@ p {
   background: #394e6c;
   border-radius: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  padding: 7px 18px;
+  padding: 5px 14px;
 }
 
 .single-content {
