@@ -178,11 +178,81 @@ p {
   font-size: 16px;
 }
 
+/******* Mise en page du contenu ******/
+.single-detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin: 40px auto 0;
+  max-width: 90vw;
+  border-top: 1px solid #dddbd4;
+  padding: 30px 0;
+}
+
+.single-detail-items {
+  height: auto;
+  overflow: hidden;
+  background: #f7f7f7;
+  border-radius: 20px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.5);
+  border: 1px solid #dddbd4;
+  padding: 20px;
+}
+.single-detail-items-subtitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--couleur-projet);
+  font-family: "Figtree", sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  margin: 0;
+}
+.single-detail-items-subtitle::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: var(--couleur-projet);
+}
+.single-detail-items-title {
+  font-size: 20px;
+  color: #394e6c;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.single-detail-items-text {
+  font-size: 15px;
+  color: #3f4140;
+}
+.single-detail-items-technologie {
+  color: #f7f7f7;
+  font-family: "Figtree", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  background: #394e6c;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  padding: 7px 18px;
+}
+
+.single-content {
+  margin: 40px auto 0;
+  max-width: 90vw;
+  border-top: 1px solid #dddbd4;
+  padding: 30px 0;
+}
+
 /****** Responsive tablette ******/
 @media (max-width: 768px) {
   .single-hero-logo {
     width: 300px;
     height: 300px;
+  }
+  .single-detail {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }
 /****** Responsive mobile ******/
@@ -223,5 +293,22 @@ p {
   }
   .single-hero-content-data-aside-link:hover {
     font-size: 13px;
+  }
+  .single-detail-items-subtitle {
+    gap: 5px;
+    font-size: 12px;
+  }
+  .single-detail-items-subtitle::before {
+    content: "";
+    width: 20px;
+  }
+  .single-detail-items-title {
+    font-size: 15px;
+  }
+  .single-detail-items-text {
+    font-size: 12px;
+  }
+  .single-detail-items-technologie {
+    font-size: 12px;
   }
 }/*# sourceMappingURL=single-projet.css.map */

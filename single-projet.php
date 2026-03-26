@@ -1,7 +1,7 @@
 <?php get_template_part('template_parts/header-single'); ?>
 
-<section class="single-hero" style="--couleur-projet: <?php echo esc_attr(get_post_meta(get_the_ID(), 'couleur_principale', true)); ?>;">    <div class="single-hero-overlay"></div>
-
+<section class="single-hero" style="--couleur-projet: <?php echo esc_attr(get_post_meta(get_the_ID(), 'couleur_principale', true)); ?>;">    
+    <div class="single-hero-overlay"></div>
     <div class="single-hero-logo">
     <?php if (has_post_thumbnail()) : ?>
         <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'small'); ?>" alt="Logo du projet">
@@ -43,26 +43,26 @@
     </div>
 </section>
 
-<section class="single-detail"> 
-    <div> 
-        <p> Contexte </p>
-        <h2> Le projet </h2>
-        <p> <?php echo esc_html(get_post_meta(get_the_ID(), 'contexte', true)); ?> </p>
+<section class="single-detail" style="--couleur-projet: <?php echo esc_attr(get_post_meta(get_the_ID(), 'couleur_principale', true)); ?>;"> 
+    <div class="single-detail-items reveal"> 
+        <p class="single-detail-items-subtitle"> Contexte </p>
+        <h2 class="single-detail-items-title"> Le projet </h2>
+        <p class="single-detail-items-text"> <?php echo esc_html(get_post_meta(get_the_ID(), 'contexte', true)); ?> </p>
     </div>
-    <div> 
-        <p> Objectif </p>
-        <h2> La mission </h2>
-        <p> <?php echo esc_html(get_post_meta(get_the_ID(), 'objectif', true)); ?> </p>
+    <div class="single-detail-items reveal"> 
+        <p class="single-detail-items-subtitle"> Objectif </p>
+        <h2 class="single-detail-items-title"> La mission </h2>
+        <p class="single-detail-items-text"> <?php echo esc_html(get_post_meta(get_the_ID(), 'objectif', true)); ?> </p>
     </div>
-    <div> 
-        <p> Solution </p>
-        <h2> L'approche </h2>
-        <p> <?php echo esc_html(get_post_meta(get_the_ID(), 'solution', true)); ?> </p>
+    <div class="single-detail-items reveal"> 
+        <p class="single-detail-items-subtitle"> Solution </p>
+        <h2 class="single-detail-items-title"> L'approche </h2>
+        <p class="single-detail-items-text"> <?php echo esc_html(get_post_meta(get_the_ID(), 'solution', true)); ?> </p>
     </div>
-    <div> 
-        <p> Technologies </p>
-        <h2> La stack </h2>
-        <p> 
+    <div class="single-detail-items reveal"> 
+        <p class="single-detail-items-subtitle"> Technologies </p>
+        <h2 class="single-detail-items-title"> La stack </h2>
+        <p class="single-detail-items-technologie"> 
             <?php $technologie_terms = get_the_terms( get_the_ID(), 'technologie' );
 			if ( ! empty( $technologie_terms ) && ! is_wp_error( $technologie_terms ) ) {
                 foreach ( $technologie_terms as $term ) {
@@ -72,8 +72,12 @@
     </div>
 </section>
 
-<section class="single-content"> 
-    <?php the_content(); ?>
+<section class="single-content reveal" style="--couleur-projet: <?php echo esc_attr(get_post_meta(get_the_ID(), 'couleur_principale', true)); ?>;"> 
+       <div class="single-detail-items"> 
+        <p class="single-detail-items-subtitle"> Galerie </p>
+        <h2 class="single-detail-items-title"> Visuel du projet </h2>        
+        <?php the_content(); ?>
+    </div>
 </section>
 
 <?php get_footer(); ?>
