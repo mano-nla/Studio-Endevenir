@@ -134,7 +134,7 @@ body {
   align-items: center;
   padding: 20px;
   position: sticky;
-  top: 20px;
+  top: 0;
   z-index: 1000;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -425,9 +425,12 @@ body {
   padding: 20px 0;
   font-family: "Poppins", sans-serif;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
   color: #3f4140;
   text-align: left;
+}
+.dropdown-menu-item-title:hover {
+  font-size: 20px;
 }
 .dropdown-menu-item-icon {
   transition: transform 0.3s ease;
@@ -441,7 +444,7 @@ body {
   margin: 10px 0;
   font-family: "Poppins", sans-serif;
   color: #3f4140;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .dropdown-menu-item.is-open .dropdown-menu-item-icon {

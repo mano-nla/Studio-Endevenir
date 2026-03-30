@@ -158,6 +158,9 @@ p {
   font-weight: bold;
   font-size: 15px;
   text-transform: uppercase;
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
 }
 .single-hero-content-data-aside-link {
   color: var(--couleur-projet);
@@ -165,6 +168,9 @@ p {
   font-weight: 600;
   font-size: 15px;
   padding-bottom: 10px;
+  animation: fadeUp 0.8s ease forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
 }
 .single-hero-content-data-aside-link:hover {
   font-size: 16px;
@@ -178,7 +184,7 @@ p {
   margin: 40px auto 0;
   max-width: 90vw;
   border-top: 1px solid #dddbd4;
-  padding: 30px 0;
+  padding: 40px 0;
 }
 
 .single-detail-items {
@@ -239,7 +245,7 @@ p {
   margin: 40px auto 0;
   max-width: 90vw;
   border-top: 1px solid #dddbd4;
-  padding: 30px 0;
+  padding: 40px 0;
 }
 
 /****** Responsive tablette ******/
@@ -297,7 +303,6 @@ p {
     font-size: 12px;
   }
   .single-detail-items-subtitle::before {
-    content: "";
     width: 20px;
   }
   .single-detail-items-title {
