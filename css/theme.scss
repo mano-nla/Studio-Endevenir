@@ -288,10 +288,14 @@ body {
     }
     &-accent {
         font-family: $font-accent;
+        font-weight: bold;
+        font-style: italic;        
         color: $blueberry;
     }
     &-signature {
         font-family: $font-accent;
+        font-weight: bold;
+        font-style: italic;
         color: $dark-grey;
         font-size: 15px;
         max-width: 680px;
@@ -414,6 +418,8 @@ body {
     margin: 0;
     & span {
         font-family: $font-accent;
+        font-weight: bold;
+        font-style: italic;
         color: $blueberry;
     }
 }
