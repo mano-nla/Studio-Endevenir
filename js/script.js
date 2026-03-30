@@ -1,19 +1,3 @@
-/*** effet de scroll sur le header ***/
-document.addEventListener('DOMContentLoaded', () => {
-    const header = document.querySelector('.header');
-    if (!header) return;
-
-    function handleScroll() {
-        if (window.scrollY > 10) {
-            header.classList.add('header--scrolled');
-        } else {
-            header.classList.remove('header--scrolled');
-        }
-    }
-    handleScroll();
-       window.addEventListener('scroll', handleScroll);
-});
-
 /*** effet de menu déroulant dans la section à propos ***/
 const dropdownItems = document.querySelectorAll('.dropdown-menu-item');
 
